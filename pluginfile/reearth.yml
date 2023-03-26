@@ -1,0 +1,157 @@
+id: reearth-PLATEAU-disaster-support-plugin
+name: PLTEAU 地域防災プラグイン
+version: 1.0.0
+extensions:
+  - id: disastersupport
+    type: widget
+    name: 地域防災支援プラグイン
+    schema:
+      groups:
+        - id: kanren
+          title: 防災関連施設
+          list: true
+          fields:
+          - id: lyrName
+            type: string
+            title: Layer name
+          - id: tagName
+            type: string
+            title: Tag Name 
+          - id: url
+            type: url
+            title: Icon
+          - id: view
+            type: bool
+            title: Default view
+        - id: facility
+          title: 多くの人が集まる施設
+          list: true
+          fields:
+          - id: lyrName
+            type: string
+            title: Layer name
+          - id: tagName
+            type: string
+            title: Tag Name  
+          - id: url
+            type: url
+            title: Icon
+          - id: view
+            type: bool
+            title: Default view
+        - id: helpful
+          title: 災害時に役立つ設備等
+          list: true
+          fields:
+          - id: lyrName
+            type: string
+            title: Layer name
+          - id: tagName
+            type: string
+            title: Tag Name  
+          - id: url
+            type: url
+            title: Icon
+          - id: view
+            type: bool
+            title: Default view
+        - id: barrier
+          title: 災害時に障害になる設備等
+          list: true
+          fields:
+          - id: lyrName
+            type: string
+            title: Layer name
+          - id: tagName
+            type: string
+            title: Tag Name  
+          - id: url
+            type: url
+            title: Icon
+          - id: view
+            type: bool
+            title: Default view
+        - id: dosyasaigai
+          title: 土砂災害警戒区域等
+          list: true
+          fields:
+          - id: lyrName
+            type: string
+            title: Layer name
+          - id: tagName
+            type: string
+            title: Tag Name  
+          - id: url
+            type: url
+            title: Icon
+          - id: view
+            type: bool
+            title: Default view
+        - id: shinsui
+          title: 洪水浸水想定区域
+          list: true
+          fields:
+          - id: lyrName
+            type: string
+            title: Layer name
+          - id: tagName
+            type: string
+            title: Tag Name  
+          - id: url
+            type: url
+            title: Icon
+          - id: view
+            type: bool
+            title: Default view
+        - id: route
+          title: 避難ルート
+          list: true
+          fields:
+          - id: lyrName
+            type: string
+            title: Layer name
+          - id: tagName
+            type: string
+            title: Tag Name  
+          - id: url
+            type: url
+            title: Icon
+          - id: view
+            type: bool
+            title: Default view
+  - id: linkbtn
+    type: widget
+    name: link Button Widget
+    schema:
+      groups:
+        - id: default
+          fields:
+            - id: title
+              type: string
+              title: Button title
+            - id: bgColor
+              type: string
+              title: Background Color
+              ui: color
+            - id: textColor
+              type: string
+              title: Text Color
+              ui: color
+            - id: linkType
+              type: string
+              title: リンクタイプ
+              defaultValue: normal
+              choices: 
+                - key: normal
+                  label: 通常サイト
+                - key: gsi
+                  label: 地理院地図
+                - key: geojsonio
+                  label: GeoJSON.io
+            - id: url
+              type: string
+              title: URL
+              availableIf:
+                field: linkType
+                type: string
+                value: normal
