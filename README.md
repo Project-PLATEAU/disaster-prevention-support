@@ -123,7 +123,7 @@
 
 （2）プラグインファイルのインストールをします。  
     ①「個人インストール済み」をクリックします。  
-    ②「PCからZipファイルをアップロード」を選択し、[ダウンロードしたzipファイル](https://github.com/Project-PLATEAU/UC22-018-disaster-prevention-support/releases/)をアップロードすることでプラグインをインストールが完了します。    
+    ②「PCからZipファイルをアップロード」を選択し、[ダウンロードしたzipファイル](https://github.com/Project-PLATEAU/disaster-prevention-support/releases/)をアップロードすることでプラグインをインストールが完了します。    
       プラグインがインストールされると、「インストール済み」にプラグインの名前が表示されます。  
 ![](images/install1.png)
 
